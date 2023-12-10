@@ -1,95 +1,128 @@
-
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-		<title>Chopsticks Game</title>
-		<link rel="stylesheet" type="text/css" href="vendor/css/reset.css"/>
-		<link rel="stylesheet" type="text/css" href="css/main.css"/>
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-		<!-- uncomment for offline use -->
-		<!-- <script type="text/javascript" src="jquery-2.1.3.min.js"></script> -->
-		<script type="text/javascript" src="js/main.js"></script>
-	</head>
-	<body>
-		<div class="preload">
-			<img src="media/points-0-unselected.svg"/>
-			<img src="media/points-2-unselected.svg"/>
-			<img src="media/points-3-unselected.svg"/>
-			<img src="media/points-4-unselected.svg"/>
-			<img src="media/points-0-selected.svg"/>
-			<img src="media/points-1-selected.svg"/>
-			<img src="media/points-2-selected.svg"/>
-			<img src="media/points-3-selected.svg"/>
-			<img src="media/points-4-selected.svg"/>
-		</div>
-		<div class="game">
-			<div class="start-screen">
-<svg id="svg3000" class="logo" width="325" height="268" viewBox="0 0 500 412" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
-<g id="layer1" transform="translate(0 -558.8)">
-	<path id="path3000" class="logo-chopsticks" d="m112.14 641.33 136.06-78.55"/>
-	<path id="path3001" class="logo-chopsticks" d="m156.54 668.94 145.8-84.18"/>
-	<text id="text3000" class="logo-title" y="696.0462" x="107.155">O</text>
-	<g id="g3100" class="logo-title">
-		<text id="text3001" y="730.01123" x="5.6613832">C</text>
-		<text id="text3002" y="729.87128" x="60.815708">H</text>
-		<text id="text3003" y="729.90625" x="167.42128">P</text>
-		<text id="text3004" y="729.90625" x="212.25191">S</text>
-		<text id="text3005" y="729.94122" x="269.08255">T</text>
-		<text id="text3006" y="729.66125" x="317.91318">I</text>
-		<text id="text3007" y="730.01123" x="346.7438">C</text>
-		<text id="text3008" y="729.90625" x="401.57443">K</text>
-		<text id="text3009" y="729.90625" x="454.40506">S</text>
-	</g>
-	<path id="path3002" d="m3.5 753.3c0 79.235 59.986 147.42 146.06 177.78h-2.1856c-12 1.845-14.95 17.19-15.268 22.438 0.14436 5.4984 0.68563 10.385 1.9046 13.781h115.99 115.99c1.2189-3.3964 1.7602-8.283 1.9046-13.781-0.31808-5.248-3.2677-20.593-15.268-22.438h-2.1856c86.072-30.359 146.06-98.549 146.06-177.78h-246.5-246.5z" stroke="#000" stroke-width="7" fill="none"/>
-	<g id="g3001" class="logo-subtitle">
-		<text id="text3010" y="835.1391" x="182.90034">HAND</text>
-		<text id="text3011" y="836.00189" x="316.92877">GAME</text>
-		<text id="text3012" y="886.00189" x="250.30518">JS</text>
-	</g>
-</g>
-</svg>
-				<ul class="options">
-					<li class="option start">Start Game</li>
-					<li class="option instructions">Instructions</li>
-					<li class="option credits">Credits</li>
-				</ul>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+		
+		
+
+	<div class="container">
+		<p class="draggable" dragabble="true"></p>
+		
+
+	<div class="container"></div>
+		<h1>CHECKERS</h1>
+
+		<ul>
+
+			<div class="div" id="row8">
+				<li class="box" class="draggable" id="b801">Wcheck</li>
+				<li class="box" id="b802"></li>
+				<li class="box" class="draggable" id="b803">Wcheck</li>
+				<li class="box" id="b804"></li>
+				<li class="box" class="draggable" id="b805">Wcheck</li>
+				<li class="box" id="b806"></li>
+				<li class="box" class="draggable" id="b807">Wcheck</li>
+				<li class="box" id="b808"></li>
 			</div>
-			<div class="region p1">
-				<h2 class="label">Player 1</h2>
-				<img class="hand top p1" points="1" src="media/points-1-unselected.svg"/>
-				<div class="split-container p1">
-					<button class="split-btn up p1">&#8593;</button>
-					<button class="split-btn down p1">&#8595;</button>
-				</div>
-				<img class="hand bottom p1" points="1" src="media/points-1-unselected.svg"/>
-				<div class="split-container">
-					<button class="split-btn apply p1">Apply</button>
-					<button class="split-btn cancel p1">Cancel</button>
-				</div>
+
+			<div class="div" id="row7">
+				<li class="box" id="b701"></li>
+				<li class="box" id="b702">Wcheck</li>
+				<li class="box" id="b703"></li>
+				<li class="box" id="b704">Wcheck</li>
+				<li class="box" id="b705"></li>
+				<li class="box" id="b706">Wcheck</li>
+				<li class="box" id="b707"></li>
+				<li class="box" id="b708">Wcheck</li>
 			</div>
-			<div class="region p2">
-				<h2 class="label">Player 2</h2>
-				<img class="hand top p2" points="1" src="media/points-1-unselected.svg"/>
-				<div class="split-container p2">
-					<button class="split-btn up p2">&#8593;</button>
-					<button class="split-btn down p2">&#8595;</button>
-				</div>
-				<img class="hand bottom p2" points="1" src="media/points-1-unselected.svg"/>
-				<div class="split-container">
-					<button class="split-btn apply p2">Apply</button>
-					<button class="split-btn cancel p2">Cancel</button>
-				</div>
+
+			<div class="div" id="row6">
+				<li class="box" id="b601">Wcheck</li>
+				<li class="box" id="b602"></li>
+				<li class="box" id="b603">Wcheck</li>
+				<li class="box" id="b604"></li>
+				<li class="box" id="b605">Wcheck</li>
+				<li class="box" id="b606"></li>
+				<li class="box" id="b607">Wcheck</li>
+				<li class="box" id="b608"></li>
 			</div>
-		</div>
-	</body>
+
+			<div class="div" id="row5">
+				<li class="box" id="b501"></li>
+				<li class="box" id="b502"></li>
+				<li class="box" id="b503"></li>
+				<li class="box" id="b504"></li>
+				<li class="box" id="b505"></li>
+				<li class="box" id="b506"></li>
+				<li class="box" id="b507"></li>
+				<li class="box" id="b508"></li>
+			</div>
+
+			<div class="div" id="row4">
+				<li class="box" id="b401"></li>
+				<li class="box" id="b402"></li>
+				<li class="box" id="b403"></li>
+				<li class="box" id="b404"></li>
+				<li class="box" id="b405"></li>
+				<li class="box" id="b406"></li>
+				<li class="box" id="b407"></li>
+				<li class="box" id="b408"></li>
+			</div>
+
+			<div class="div" id="row3">
+				<li class="box" id="b301"></li>
+				<li class="box" id="b302">Rcheck</li>
+				<li class="box" id="b303"></li>
+				<li class="box" id="b304">Rcheck</li>
+				<li class="box" id="b305"></li>
+				<li class="box" id="b306">Rcheck</li>
+				<li class="box" id="b307"></li>
+				<li class="box" id="b308">Rcheck</li>
+			</div>
+
+			<div class="div" id="row2">
+				<li class="box" id="b201">Rcheck</li>
+				<li class="box" id="b202"></li>
+				<li class="box" id="b203">Rcheck</li>
+				<li class="box" id="b204"></li>
+				<li class="box" id="b205">Rcheck</li>
+				<li class="box" id="b206"></li>
+				<li class="box" id="b207">Rcheck</li>
+				<li class="box" id="b208"></li>
+			</div>	
+
+			<div class="div" id="row1">
+				<li class="box" id="b101"></li>
+				<li class="box" id="b102">Rcheck</li>
+				<li class="box" id="b103"></li>
+				<li class="box" id="b104">Rcheck</li>
+				<li class="box" id="b105"></li>
+				<li class="box" id="b106">Rcheck</li>
+				<li class="box" id="b107"></li>
+				<li class="box" id="b108">Rcheck</li>
+			</div>
+		</ul>
+
+		<h2 id="tog">Red's Turn</h2>
+		<h2 id="reset-btn">Reset</h2>
+
+	</div>
+
+	<script src="logic.js"></script>
+</body>
 </html>
 
-<h1> Class Project Proposal</h1>
-<br>
-<h2> The app will reflect a game of sticks</h2>
-<p1>sticks is a game in which the total number of sticks <br>
-each player has cannot be exactly equal to five, <br>
-and if more than 5 are a final result, the difference between <br>
-the total and 5 is the resulting amount. The game ends when a player <br>
-loses both bundles of 5 sticks</p1>
+
+
+
+
+
+</html>
